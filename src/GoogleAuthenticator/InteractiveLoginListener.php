@@ -35,7 +35,7 @@ class InteractiveLoginListener
     /**
      * @param InteractiveLoginEvent $event
      */
-    public function onSecurityInteractiveLogin(InteractiveLoginEvent $event): void
+    public function onSecurityInteractiveLogin(InteractiveLoginEvent $event)
     {
         if (!$this->helper->needToHaveGoogle2FACode($event->getRequest())) {
             return;
